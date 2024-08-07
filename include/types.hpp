@@ -11,5 +11,5 @@
 
 namespace fleetBattle
 {
-
+    template<BoardSquare S,BidimensionalContainer BC> C boardType<S>;
 }

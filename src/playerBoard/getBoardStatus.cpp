@@ -4,11 +4,9 @@
  *
  */
 
-#ifndef TYPES_HPP
-#define TYPES_HPP
+ #include "playerBoard.cpp"
 
-namespace fleetBattle
-{
-    using SquareType = char;
-    using BoardType  = std::vector<std::vector<SquareType>>;
-}
+ namespace fleetBattle
+ {
+    BoardType playerBoard::getBoardStatus(){}
+ }

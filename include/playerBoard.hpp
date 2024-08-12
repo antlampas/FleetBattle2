@@ -7,11 +7,22 @@
 #ifndef PLAYERBOARD_HPP
 #define PLAYERBOARD_HPP
 
-#include "concepts.hpp"
 #include "types.hpp"
 #include "board.hpp"
 
 namespace fleetBattle
 {
+    class playerBoard : public board
+    {
+        private:
+        BoardType _board;
+        BoardType shipsOverlay;
 
+        public:
+        playerBoard(BoardType);
+        virtual BoardType  getBoardStatus()                    override;
+        virtual SquareType getSquareStatus(int,int)            override;
+        virtual SquareType setSquareStatus(int,int,SquareType) override;
+        ~playerBoard();
+    };
 }

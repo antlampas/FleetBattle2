@@ -7,7 +7,6 @@
 #ifndef BOARD_HPP
 #define BOARD_HPP
 
-#include "concepts.hpp"
 #include "types.hpp"
 
 #include <string>
@@ -23,11 +22,9 @@ namespace fleetBattle
     {
         public:
         board();
-        SquareType getSquareStatus(std::string);
-        SquareType setSquareStatus(std::string,SquareType);
-        BoardType  getBoardStatus();
-
-        private:
-        BoardType Board;
+        virtual SquareType getSquareStatus(int row,int column)            = 0;
+        virtual SquareType setSquareStatus(int row,int column,SquareType) = 0;
+        virtual BoardType  getBoardStatus()                               = 0;
+        virtual ~board();
     };
 }

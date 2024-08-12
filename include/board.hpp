@@ -22,8 +22,8 @@ namespace fleetBattle
     {
         public:
         board();
-        virtual SquareType getSquareStatus(int row,int column)            = 0;
-        virtual SquareType setSquareStatus(int row,int column,SquareType) = 0;
+        virtual SquareType getSquareStatus(std::pair<int,int>)            = 0;
+        virtual SquareType setSquareStatus(std::pair<int,int>,SquareType) = 0;
         virtual BoardType  getBoardStatus()                               = 0;
         virtual ~board();
     };

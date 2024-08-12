@@ -8,5 +8,5 @@
 
  namespace fleetBattle
  {
-    SquareType playerBoard::getSquareStatus(int row,int column){}
+    SquareType playerBoard::getSquareStatus(std::pair<int,int> coordinates){}
  }

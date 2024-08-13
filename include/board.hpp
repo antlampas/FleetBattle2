@@ -17,13 +17,12 @@
 
 namespace fleetBattle
 {
-    template<BidimentionalContainer BoardType,BoardSquare SquareType>
     class board
     {
         public:
         board();
-        virtual SquareType getSquareStatus(std::pair<int,int>)            = 0;
-        virtual SquareType setSquareStatus(std::pair<int,int>,SquareType) = 0;
+        virtual SquareType getSquareStatus(DecodedCoordinates)            = 0;
+        virtual SquareType setSquareStatus(DecodedCoordinates,SquareType) = 0;
         virtual BoardType  getBoardStatus()                               = 0;
         virtual ~board();
     };

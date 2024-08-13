@@ -10,7 +10,7 @@
 
 namespace fleetBattle
 {
-    std::pair<int,int> decodeCoordinates(std::string coordinates)
+    std::pair<int,int> decodeCoordinates(Coordinates coordinates)
     {
         std::regex validCoordinates("^[a-jA-J][0-9]$|^[a-jA-J]10$")
         if(std::regex_match(coordinates,validcoordinates))

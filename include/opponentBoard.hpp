@@ -19,8 +19,8 @@ namespace fleetBattle
 
         public:
         opponentBoard(BoardType);
-        virtual SquareType getSquareStatus(std::pair<int,int>)            override;
-        virtual SquareType setSquareStatus(std::pair<int,int>,SquareType) override;
+        virtual SquareType getSquareStatus(DecodedCoordinates)            override;
+        virtual SquareType setSquareStatus(DecodedCoordinates,SquareType) override;
         virtual BoardType  getBoardStatus()                               override;
         ~opponentBoard();
     }

@@ -8,6 +8,8 @@
 
 namespace fleetBattle
 {
-    player::player(playerBoard initialBoard){}
-    player::~player(){}
+    player::player(playerBoard initialBoard) : ownBoard{initialBoard},otherBoard{}
+    {}
+    player::~player()
+    {}
 }

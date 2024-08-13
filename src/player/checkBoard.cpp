@@ -8,5 +8,8 @@
 
 namespace fleetBattle
 {
-    BoardType player::checkBoard(){}
+    BoardType player::checkBoard()
+    {
+        return this->_board;
+    }
 }

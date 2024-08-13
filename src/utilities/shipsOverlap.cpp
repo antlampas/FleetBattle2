@@ -14,7 +14,7 @@ namespace fleetBattle
         std::vector<std::pair<int,int>> ship1Squares,ship2Squares;
         std::for_each(ship1.begin(),ship1.end(),[](std::pair<int,int> p) ships1Squares.push_back(p));
         std::for_each(ship2.begin(),ship2.end(),[](std::pair<int,int> p) ships2Squares.push_back(p));
-        if(std::find_first_of(ships1Squares.begin(),ships1Squares.end(),ships1Squares.begin(),ships1Squares.end())!=ships1Squares.end())
+        if(std::find_first_of(ships1Squares.begin(),ships1Squares.end(),ships1Squares.begin(),ships1Squares.end()) != ships1Squares.end())
             return true;
         else
             return false;

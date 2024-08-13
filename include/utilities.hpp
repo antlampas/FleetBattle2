@@ -12,10 +12,10 @@
 
 namespace fleetBattle
 {
-    bool isVertical(std::pair<int.int>,std::pair<int.int>);
-    bool isHorizontal(std::pair<int.int>,std::pair<int.int>);
-    bool shipsOverlap(std::pair<std::pair<int,int>,std::pair<int,int>>,std::pair<std::pair<int,int>,std::pair<int,int>>);
-    std::pair<int,int> decodeCoordinates(std::string);
+    bool isVertical(DecodedCoordinates,DecodedCoordinates);
+    bool isHorizontal(DecodedCoordinates,DecodedCoordinates);
+    bool shipsOverlap(ShipPosition,ShipPosition);
+    DecodedCoordinates decodeCoordinates(std::string);
 }
 
  #endif

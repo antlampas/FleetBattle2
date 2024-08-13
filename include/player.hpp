@@ -18,7 +18,7 @@ namespace fleetBattle
 
         public:
         player(playerBoard);
-        SquareType shoot(decodedCoordinates);
+        SquareType checkShoot(decodedCoordinates);
         BoardType  checkBoard();
         ~player();
     };

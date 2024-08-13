@@ -8,8 +8,11 @@
 
 namespace fleetBattle
 {
-    bool isVertical(DecodedCoordinates coordinates)
+    bool isVertical(ShipPosition ship)
     {
-
+        if(ship.first.first != ship.second.first && ship.first.second == ship.second.second)
+            return true
+        else
+            return false
     }
 }

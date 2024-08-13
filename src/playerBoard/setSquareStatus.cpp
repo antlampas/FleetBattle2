@@ -4,14 +4,13 @@
  *
  */
 
- #include "playerBoard.cpp"
+#include "playerBoard.cpp"
 
- namespace fleetBattle
- {
+namespace fleetBattle
+{
     SquareType playerBoard::setSquareStatus(std::pair<int,int> coordinates,SquareType value)
     {
         this->_board.at(coordinates.first).at(coordinates.second) = value;
-        
         return this->_board.at(coordinates.first).at(coordinates.second);
     }
- }
+}

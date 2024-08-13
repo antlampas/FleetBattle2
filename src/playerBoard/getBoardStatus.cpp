@@ -4,12 +4,12 @@
  *
  */
 
- #include "playerBoard.cpp"
+#include "playerBoard.cpp"
 
- namespace fleetBattle
- {
+namespace fleetBattle
+{
     BoardType playerBoard::getBoardStatus()
     {
         return this->_board;
     }
- }
+}

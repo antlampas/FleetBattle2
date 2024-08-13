@@ -4,10 +4,13 @@
  *
  */
 
-#include "playerBoard.hpp"
+#include "utilities.hpp"
+#include <regex>
 
 namespace fleetBattle
 {
-   playerBoard(BoardType shipsOverlay) : shipsOverlay(shipsOverlay){}
-   ~playerBoard(){}
+    std::pair<int,int> decodeCoordinates(std::string coordinates)
+    {
+        
+    }
 }

@@ -19,3 +19,5 @@ namespace fleetBattle
     using ShipPosition       = std::pair<DecodedCoordinates,DecodedCoordinates>;
     using Coordinates        = std::string;
 }
+
+#endif

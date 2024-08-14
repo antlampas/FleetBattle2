@@ -25,3 +25,5 @@ namespace fleetBattle
         ~opponentBoard()                                          override;
     }
 }
+
+#endif

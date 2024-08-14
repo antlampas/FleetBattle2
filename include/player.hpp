@@ -4,6 +4,9 @@
  *
  */
 
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
+
 #include "types.hpp"
 #include "playerBoard.hpp"
 #include "opponentBoard.hpp"
@@ -23,3 +26,5 @@ namespace fleetBattle
         ~player();
     };
 }
+
+#endif

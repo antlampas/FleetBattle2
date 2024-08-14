@@ -11,10 +11,6 @@
 
 #include <string>
 
-#ifdef TESTBOARD
-#define private public
-#endif
-
 namespace fleetBattle
 {
     class board
@@ -26,3 +22,5 @@ namespace fleetBattle
         virtual ~board()                                                  = 0;
     };
 }
+
+#endif

@@ -8,6 +8,6 @@
 
 namespace fleetBattle
 {
-   opponentBoard::opponentBoard(){}
-   opponentBoard::~opponentBoard(){}
+   /* opponentBoard::opponentBoard(){}
+   opponentBoard::~opponentBoard(){} */
 }

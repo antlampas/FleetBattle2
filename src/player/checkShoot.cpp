@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    SquareType player::checkShoot(decodedCoordinates coordinates)
+    SquareType player::checkShoot(DecodedCoordinates coordinates)
     {
         this->_board.at(coordinates.first).at(coordinates.second) = this->_board.at(coordinates.first).at(coordinates.second) + 32
 

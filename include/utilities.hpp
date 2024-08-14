@@ -14,8 +14,8 @@
 
 namespace fleetBattle
 {
-    bool isVertical(DecodedCoordinates);
-    bool isHorizontal(DecodedCoordinates);
+    bool isVertical(ShipPosition);
+    bool isHorizontal(ShipPosition);
     bool shipsOverlap(ShipPosition,ShipPosition);
     DecodedCoordinates decodeCoordinates(Coordinates);
 }

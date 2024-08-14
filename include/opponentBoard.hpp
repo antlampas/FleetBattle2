@@ -18,12 +18,12 @@ namespace fleetBattle
         BoardType _board;
 
         public:
-        opponentBoard(BoardType);
+        opponentBoard();
         SquareType getSquareStatus(DecodedCoordinates)            override;
         SquareType setSquareStatus(DecodedCoordinates,SquareType) override;
         BoardType  getBoardStatus()                               override;
         ~opponentBoard()                                          override;
-    }
+    };
 }
 
 #endif

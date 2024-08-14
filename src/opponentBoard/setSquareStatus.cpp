@@ -8,7 +8,7 @@
 
  namespace fleetBattle
  {
-    SquareType opponentBoard::setSquareStatus(std::pair<int,int> coordinates,SquareType value)
+    SquareType opponentBoard::setSquareStatus(DecodedCoordinates coordinates,SquareType value)
     {
         this->_board.at(coordinates.first).at(coordinates.second) = value;
         

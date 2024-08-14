@@ -19,7 +19,7 @@ namespace fleetBattle
         BoardType shipsOverlay;
 
         public:
-        playerBoard(BoardType shipsOverlay)  : shipsOverlay{shipsOverlay}{};
+        playerBoard(BoardType shipsOverlay);
         BoardType  getBoardStatus()                               override;
         SquareType getSquareStatus(DecodedCoordinates)            override;
         SquareType setSquareStatus(DecodedCoordinates,SquareType) override;

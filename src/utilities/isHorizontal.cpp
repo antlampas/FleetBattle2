@@ -11,8 +11,8 @@ namespace fleetBattle
     bool isHorizontal(ShipPosition ship)
     {
         if(ship.first.first == ship.second.first && ship.first.second != ship.second.second)
-            return true
+            return true;
         else
-            return false
+            return false;
     }
 }

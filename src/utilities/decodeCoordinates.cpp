@@ -12,11 +12,11 @@ namespace fleetBattle
 {
     std::pair<int,int> decodeCoordinates(Coordinates coordinates)
     {
-        std::regex validCoordinates("^[a-jA-J][0-9]$|^[a-jA-J]10$")
-        if(std::regex_match(coordinates,validcoordinates))
+        std::regex validCoordinates("^[a-jA-J][0-9]$|^[a-jA-J]10$");
+        if(std::regex_match(coordinates,validCoordinates))
         {
             std::transform(coordinates.begin(),coordinates.end(),coordinates.begin(),::toupper);
-            std::pair<int,int> _decodedCoordinates {coordinates.substr(0,1).stoi()-65,coordinates.substr(1,coordinates.size()-1).stoi()};
+            std::pair<int,int> _decodedCoordinates {std::stoi(coordinates.substr(0,1))-65,std::stoi(coordinates.substr(1,coordinates.size()-1))};
             return _decodedCoordinates;
         }
         else

@@ -5,7 +5,7 @@
  */
 
 #include "utilities.hpp"
-#include <algorithms>
+#include <algorithm>
 
 namespace fleetBattle
 {

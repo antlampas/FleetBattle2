@@ -4,8 +4,10 @@
  *
  */
 
- #ifndef UTILITIES_HPP
- #define UTILITIES_HPP
+#ifndef UTILITIES_HPP
+#define UTILITIES_HPP
+
+#include "types.hpp"
 
 #include <vector>
 #include <utility>

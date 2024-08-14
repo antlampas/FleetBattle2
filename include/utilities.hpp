@@ -20,4 +20,4 @@ namespace fleetBattle
     DecodedCoordinates decodeCoordinates(Coordinates);
 }
 
- #endif
+#endif

@@ -8,6 +8,5 @@
 
 namespace fleetBattle
 {
-   playerBoard::playerBoard(BoardType shipsOverlay) : shipsOverlay(shipsOverlay){}
-   playerBoard::~playerBoard(){}
+   //playerBoard::playerBoard(BoardType shipsOverlay){}
 }

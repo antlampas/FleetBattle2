@@ -14,6 +14,7 @@
 namespace fleetBattle
 {
     using SquareType         = char;
+    using ColumnType         = std::vector<SquareType>;
     using BoardType          = std::vector<std::vector<SquareType>>;
     using DecodedCoordinates = std::pair<int,int>;
     using ShipPosition       = std::pair<DecodedCoordinates,DecodedCoordinates>;

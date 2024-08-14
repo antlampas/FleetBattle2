@@ -20,10 +20,9 @@ namespace fleetBattle
     class board
     {
         public:
-        board();
         virtual SquareType getSquareStatus(DecodedCoordinates)            = 0;
         virtual SquareType setSquareStatus(DecodedCoordinates,SquareType) = 0;
         virtual BoardType  getBoardStatus()                               = 0;
-        virtual ~board();
+        virtual ~board()                                                  = 0;
     };
 }

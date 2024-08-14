@@ -12,7 +12,7 @@
 
 namespace fleetBattle
 {
-    class playerBoard : public board
+    class playerBoard final : public board
     {
         private:
         BoardType _board;
@@ -20,9 +20,9 @@ namespace fleetBattle
 
         public:
         playerBoard(BoardType);
-        virtual BoardType  getBoardStatus()                               override;
-        virtual SquareType getSquareStatus(DecodedCoordinates)            override;
-        virtual SquareType setSquareStatus(DecodedCoordinates,SquareType) override;
-        ~playerBoard();
+        BoardType  getBoardStatus()                               override;
+        SquareType getSquareStatus(DecodedCoordinates)            override;
+        SquareType setSquareStatus(DecodedCoordinates,SquareType) override;
+        ~playerBoard()                                            override;
     };
 }

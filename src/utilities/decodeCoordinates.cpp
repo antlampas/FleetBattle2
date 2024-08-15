@@ -18,16 +18,11 @@ namespace fleetBattle
         std::regex validCoordinates("^[a-jA-J][0-9]$|^[a-jA-J]10$");
         if(std::regex_match(coordinates,validCoordinates))
         {
-            try{
             std::transform(coordinates.begin(),coordinates.end(),coordinates.begin(),::toupper);
             std::string colStr = coordinates.substr(0,1);
             std::string rowStr = coordinates.substr(1,coordinates.size()-1);
-            std::pair<int,int> _DecodedCoordinates {std::stoi(colStr)-65,std::stoi(rowStr)};
+            std::pair<int,int> _DecodedCoordinates {static_cast<int>(colStr)-65,std::stoi(rowStr)};
             return _DecodedCoordinates;
-            }catch(std::exception e)
-            {
-                std::cerr << e.what() << std::endl;
-            }
         }
         else
         {

@@ -25,7 +25,7 @@ namespace fleetBattle
         if(isVertical(ship2))
             for(int row=ship2.first.first;row<=ship2.second.first;row++)
                 ship2Squares.push_back(std::pair<int,int>(row,ship2.first.second));
-        if(std::find_first_of(ship1Squares.begin(),ship1Squares.end(),ship1Squares.begin(),ship1Squares.end()) != ship1Squares.end())
+        if(std::find_first_of(ship1Squares.begin(),ship1Squares.end(),ship2Squares.begin(),ship2Squares.end()) != ship1Squares.end())
             return true;
         else
             return false;

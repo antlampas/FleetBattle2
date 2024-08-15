@@ -8,6 +8,9 @@
 #include <regex>
 #include <algorithm>
 
+#include <exception>
+#include <iostream>
+
 namespace fleetBattle
 {
     std::pair<int,int> decodeCoordinates(Coordinates coordinates)
@@ -15,9 +18,14 @@ namespace fleetBattle
         std::regex validCoordinates("^[a-jA-J][0-9]$|^[a-jA-J]10$");
         if(std::regex_match(coordinates,validCoordinates))
         {
+            try{
             std::transform(coordinates.begin(),coordinates.end(),coordinates.begin(),::toupper);
             std::pair<int,int> _DecodedCoordinates {std::stoi(coordinates.substr(0,1))-65,std::stoi(coordinates.substr(1,coordinates.size()-1))};
             return _DecodedCoordinates;
+            }catch(std::exception e)
+            {
+                std::cerr << e.what() << std::endl;
+            }
         }
         else
         {

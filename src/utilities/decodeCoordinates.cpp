@@ -21,7 +21,7 @@ namespace fleetBattle
             std::transform(coordinates.begin(),coordinates.end(),coordinates.begin(),::toupper);
             std::string colStr = coordinates.substr(0,1);
             std::string rowStr = coordinates.substr(1,coordinates.size()-1);
-            std::pair<int,int> _DecodedCoordinates {static_cast<int>(colStr)-65,std::stoi(rowStr)};
+            std::pair<int,int> _DecodedCoordinates {static_cast<int>(colStr.c_str()[0])-65,std::stoi(rowStr)};
             return _DecodedCoordinates;
         }
         else

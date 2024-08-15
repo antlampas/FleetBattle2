@@ -4,14 +4,14 @@
  *
  */
 
- #include "opponentBoard.cpp"
+#include "opponentBoard.hpp"
 
- namespace fleetBattle
- {
+namespace fleetBattle
+{
     SquareType opponentBoard::setSquareStatus(DecodedCoordinates coordinates,SquareType value)
     {
         this->_board.at(coordinates.first).at(coordinates.second) = value;
         
         return this->_board.at(coordinates.first).at(coordinates.second);
     }
- }
+}

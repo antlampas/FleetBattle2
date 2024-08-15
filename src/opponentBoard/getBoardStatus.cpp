@@ -4,12 +4,12 @@
  *
  */
 
- #include "opponentBoard.cpp"
+#include "opponentBoard.hpp"
 
- namespace fleetBattle
- {
+namespace fleetBattle
+{
     BoardType opponentBoard::getBoardStatus()
     {
         return this->_board;
     }
- }
+}

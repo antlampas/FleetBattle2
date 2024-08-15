@@ -4,7 +4,7 @@
  *
  */
 
-#include "playerBoard.cpp"
+#include "playerBoard.hpp"
 
 namespace fleetBattle
 {

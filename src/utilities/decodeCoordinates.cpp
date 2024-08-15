@@ -20,7 +20,9 @@ namespace fleetBattle
         {
             try{
             std::transform(coordinates.begin(),coordinates.end(),coordinates.begin(),::toupper);
-            std::pair<int,int> _DecodedCoordinates {std::stoi(coordinates.substr(0,1))-65,std::stoi(coordinates.substr(1,coordinates.size()-1))};
+            std::string colStr = coordinates.substr(0,1);
+            std::string rowStr = coordinates.substr(1,coordinates.size()-1);
+            std::pair<int,int> _DecodedCoordinates {std::stoi(colStr)-65,std::stoi(rawStr)};
             return _DecodedCoordinates;
             }catch(std::exception e)
             {

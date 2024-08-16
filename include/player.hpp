@@ -22,7 +22,9 @@ namespace fleetBattle
         public:
         player(playerBoard);
         SquareType checkShoot(DecodedCoordinates);
-        BoardType  checkBoard();
+        BoardType  checkOwnBoard();
+        BoardType  checkOtherBoard();
+        SquareType updateOtherBoard(DecodedCoordinates,SquareType);
         ~player();
     };
 }

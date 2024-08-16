@@ -3,7 +3,8 @@
 get_directory_property(MYDEFS COMPILE_DEFINITIONS)
 
 add_library(player SHARED
-            checkBoard.cpp
+            checkOtherBoard.cpp
+            checkOwnBoard.cpp
             checkShoot.cpp
             player.cpp
            )

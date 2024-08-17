@@ -7,12 +7,15 @@
 #ifndef TYPES_HPP
 #define TYPES_HPP
 
+#include <map>
 #include <vector>
 #include <utility>
 #include <string>
 
 namespace fleetBattle
 {
+    enum SquareStatus { WATER='W',WATER_HIT='w',SHIP='S',SHIP_HIT='s' };
+
     using SquareType         = char;
     using ColumnType         = std::vector<SquareType>;
     using BoardType          = std::vector<ColumnType>;

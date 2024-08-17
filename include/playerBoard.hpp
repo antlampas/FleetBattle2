@@ -15,22 +15,16 @@ namespace fleetBattle
     class playerBoard final : public board
     {
         public:
-        playerBoard(BoardType shipsOverlay);
+        playerBoard();
+        playerBoard(std::vector<ShipPosition>);
         BoardType  getBoardStatus()                               override;
         SquareType getSquareStatus(DecodedCoordinates)            override;
         SquareType setSquareStatus(DecodedCoordinates,SquareType) override;
 
-        public:
-        int sunkShipsCount();
-
         private:
         BoardType _board;
         BoardType shipsOverlay;
-        std::vector<ShipPosition> sunkShips;
-
-        private:
-        ShipPosition addSunkShip(ShipPosition);
-        bool isShipSunk(DecodedCoordinates);
+        
     };
 }
 

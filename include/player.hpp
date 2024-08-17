@@ -16,16 +16,27 @@ namespace fleetBattle
     class player
     {
         public:
-        player(playerBoard);
+        player() = delete;
+        player(std::vector<ShipPosition>);
         SquareType checkShoot(DecodedCoordinates);
         BoardType  checkOwnBoard();
         BoardType  checkOtherBoard();
         SquareType updateOtherBoard(DecodedCoordinates,SquareType);
         ~player();
         
+        public:
+        int getSunkShipsCount();
+        int getDeployedShips();
+
         private:
-        playerBoard   ownBoard;
-        opponentBoard otherBoard;
+        playerBoard               ownBoard;
+        opponentBoard             otherBoard;
+        std::vector<ShipPosition> sunkShips;
+        std::vector<ShipPosition> deployedShips;
+
+        private:
+        ShipPosition addSunkShip(ShipPosition);
+        bool         isShipSunk(ShipPosition);
     };
 }
 

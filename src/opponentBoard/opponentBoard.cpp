@@ -14,7 +14,7 @@ namespace fleetBattle
         {
             this->_board.push_back(ColumnType());
             for(int column: {0,1,2,3,4,5,6,7,8,9})
-                this->_board.at(row).push_back('W');
+                this->_board.at(row).push_back(SquareStatus.WATER);
         }
     }
 }

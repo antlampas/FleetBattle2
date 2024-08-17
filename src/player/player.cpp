@@ -8,6 +8,15 @@
 
 namespace fleetBattle
 {
-    player::player(playerBoard initialBoard) : ownBoard{initialBoard},otherBoard{}{}
+    player::player(std::vector<ShipPosition> deployedShips) : ownBoard{},otherBoard{}
+    {
+        for(auto ship: deployedShips)
+        {
+            for(int row=ship.first.first;row<=ship.second.first;row++)
+                for(int column=ship.first.second;column<=ship.second.second;column++)
+                    this->ownBoard.setSquareStatus(std::make_pair(row,column),SquareStatus.SHIP)
+            this->deployedShips.push_back(ship);
+        }
+    }
     player::~player(){}
 }

@@ -15,10 +15,6 @@ namespace fleetBattle
 {
     class player
     {
-        private:
-        playerBoard   ownBoard;
-        opponentBoard otherBoard;
-
         public:
         player(playerBoard);
         SquareType checkShoot(DecodedCoordinates);
@@ -26,6 +22,10 @@ namespace fleetBattle
         BoardType  checkOtherBoard();
         SquareType updateOtherBoard(DecodedCoordinates,SquareType);
         ~player();
+        
+        private:
+        playerBoard   ownBoard;
+        opponentBoard otherBoard;
     };
 }
 

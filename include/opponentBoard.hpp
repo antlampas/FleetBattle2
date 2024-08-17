@@ -14,14 +14,14 @@ namespace fleetBattle
 {
     class opponentBoard final : public board
     {
-        private:
-        BoardType _board;
-
         public:
         opponentBoard();
         SquareType getSquareStatus(DecodedCoordinates)            override;
         SquareType setSquareStatus(DecodedCoordinates,SquareType) override;
         BoardType  getBoardStatus()                               override;
+        
+        private:
+        BoardType _board;
     };
 }
 

@@ -29,7 +29,7 @@ namespace fleetBattle
         std::vector<ShipPosition> sunkShips;
 
         private:
-        ShipPosition addSunkShip(shipPosition);
+        ShipPosition addSunkShip(ShipPosition);
         bool isShipSunk(DecodedCoordinates);
     };
 }

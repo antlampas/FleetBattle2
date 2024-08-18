@@ -14,7 +14,7 @@
 
 namespace fleetBattle
 {
-    enum SquareStatus { WATER='W',WATER_HIT='w',SHIP='S',SHIP_HIT='s' };
+    enum SquareStatus : char { WATER='W',WATER_HIT='w',SHIP='S',SHIP_HIT='s' };
 
     using SquareType         = char;
     using ColumnType         = std::vector<SquareType>;

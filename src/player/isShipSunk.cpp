@@ -12,7 +12,7 @@ namespace fleetBattle
 {
     bool player::isShipSunk(ShipPosition ship)
     {      
-        ShipPosition::iterator shipFound = std::find(this->deployedShips.begin(),this->deployedShips.end(),ship);
+        auto shipFound = std::find(this->deployedShips.begin(),this->deployedShips.end(),ship);
         
         if(shipFound != this->deployedShips.end())
         {

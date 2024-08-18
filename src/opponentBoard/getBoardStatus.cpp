@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    inline BoardType opponentBoard::getBoardStatus()
+    BoardType opponentBoard::getBoardStatus()
     {
         return this->_board;
     }

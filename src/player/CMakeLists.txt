@@ -8,6 +8,6 @@ add_library(player SHARED
             checkOwnBoard.cpp
             checkShoot.cpp
             getDeployedShipsCount.cpp
-            getSunkShipCount.cpp
+            getSunkShipsCount.cpp
             player.cpp
            )

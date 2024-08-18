@@ -8,8 +8,8 @@
 
 namespace fleetBattle
 {
-    int getSunkShipsCount()
+    inline int getSunkShipsCount()
     {
-        return this->sunkShips
+        return this->sunkShips.size();
     }
 }

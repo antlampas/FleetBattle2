@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    BoardType player::checkOwnBoard()
+    inline BoardType player::checkOwnBoard()
     {
         return this->ownBoard.getBoardStatus();
     }

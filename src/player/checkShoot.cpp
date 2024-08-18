@@ -19,7 +19,10 @@ namespace fleetBattle
         {
             if(this->isShipHit(ship,coordinates))
             {
-                this->isShipSunk(ship);
+                if(this->isShipSunk(ship))
+                {
+                    this->addSunkShip(ship)
+                }
             }
         }
 

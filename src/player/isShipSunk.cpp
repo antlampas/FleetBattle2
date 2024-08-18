@@ -20,7 +20,6 @@ namespace fleetBattle
                 for(int column=ship.first.second;column<=ship.second.second;column++)
                     if(this->ownBoard.getSquareStatus(std::make_pair(row,column)) != SquareStatus::SHIP_HIT)
                         return false;
-            this->sunkShips.push_back(ship);
             return true;
         }
         return false;

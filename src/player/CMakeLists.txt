@@ -9,5 +9,7 @@ add_library(player SHARED
             checkShoot.cpp
             getDeployedShipsCount.cpp
             getSunkShipsCount.cpp
+            isShipSunk.cpp
             player.cpp
+            updateOtherBoard.cpp
            )

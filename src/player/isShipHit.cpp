@@ -10,6 +10,8 @@ namespace fleetBattle
 {
     bool player::isShipHit(ShipPosition ship,DecodedCoordinates coordinates)
     {
+        int coordinatesRow    = coordinates.first;
+        int coordinatesColumn = coordinates.second;
         int shipInitialRow    = ship.first.first;
         int shipEndRow        = ship.second.first;
         int shipInitialColumn = ship.first.second;

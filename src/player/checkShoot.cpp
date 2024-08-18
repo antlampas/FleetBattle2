@@ -15,7 +15,7 @@ namespace fleetBattle
         int coordinatesRow    = coordinates.first;
         int coordinatesColumn = coordinates.second;
 
-        for(auto ship; this->deployedShips)
+        for(auto ship: this->deployedShips)
         {
             int shipInitialRow    = ship.first.first;
             int shipEndRow        = ship.second.first;

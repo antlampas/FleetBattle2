@@ -21,7 +21,7 @@ namespace fleetBattle
                     if(this->ownBoard.getSquareStatus(std::make_pair(row,column)) != SquareStatus::SHIP_HIT)
                         return false;
             return true;
-            
         }
+        return false;
     }
 }

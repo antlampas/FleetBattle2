@@ -37,6 +37,7 @@ namespace fleetBattle
         private:
         ShipPosition addSunkShip(ShipPosition);
         bool         isShipSunk(ShipPosition);
+        bool         isShipHit(ShipPosition,DecodedCoordinates);
     };
 }
 

@@ -14,7 +14,7 @@ namespace fleetBattle
         {
             for(int row=ship.first.first;row<=ship.second.first;row++)
                 for(int column=ship.first.second;column<=ship.second.second;column++)
-                    this->ownBoard.setSquareStatus(std::make_pair(row,column),SquareStatus::SHIP)
+                    this->ownBoard.setSquareStatus(std::make_pair(row,column),SquareStatus::SHIP);
             this->deployedShips.push_back(ship);
         }
     }

@@ -7,7 +7,6 @@
 #ifndef PLAYERBOARD_HPP
 #define PLAYERBOARD_HPP
 
-#include "types.hpp"
 #include "utilities.hpp"
 #include "board.hpp"
 

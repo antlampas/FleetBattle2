@@ -21,7 +21,7 @@ namespace fleetBattle
             {
                 if(this->isShipSunk(ship))
                 {
-                    this->addSunkShip(ship)
+                    this->addSunkShip(ship);
                 }
             }
         }

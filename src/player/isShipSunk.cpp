@@ -18,7 +18,7 @@ namespace fleetBattle
         {
             for(int row=ship.first.first;row<=ship.second.first;row++)
                 for(int column=ship.first.second;column<=ship.second.second;column++)
-                    if(this->ownBoard.getSquareStatus(std::make_pair(row,column)) != SquareStatus.SHIP_HIT)
+                    if(this->ownBoard.getSquareStatus(std::make_pair(row,column)) != SquareStatus::SHIP_HIT)
                         return false;
             return true;
             

@@ -8,6 +8,7 @@
 #define PLAYERBOARD_HPP
 
 #include "types.hpp"
+#include "utilities.hpp"
 #include "board.hpp"
 
 namespace fleetBattle

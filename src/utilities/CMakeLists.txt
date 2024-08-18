@@ -6,5 +6,6 @@ add_library(utilities SHARED
             decodeCoordinates.cpp
             isHorizontal.cpp
             isVertical.cpp
+            makeBoardFromShipsList.cpp
             shipsOverlap.cpp
            )

@@ -18,6 +18,7 @@ namespace fleetBattle
     bool isHorizontal(ShipPosition);
     bool shipsOverlap(ShipPosition,ShipPosition);
     DecodedCoordinates decodeCoordinates(Coordinates);
+    BoardType makeBoardFromShipsList(std::vector<ShipPosition>);
 }
 
 #endif

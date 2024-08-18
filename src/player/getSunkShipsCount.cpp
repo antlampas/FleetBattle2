@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    inline int getSunkShipsCount()
+    inline int player::getSunkShipsCount()
     {
         return this->sunkShips.size();
     }

@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    ShipPosition addSunkShip(ShipPosition ship)
+    ShipPosition player::addSunkShip(ShipPosition ship)
     {
         if(this->isShipSunk(ship))
         {

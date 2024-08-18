@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    inline int getDeployedShips()
+    inline int player::getDeployedShips()
     {
         return this->deployedShips.size();
     }

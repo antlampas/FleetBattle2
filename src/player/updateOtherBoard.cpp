@@ -12,6 +12,6 @@ namespace fleetBattle
     {
         this->otherBoard.setSquareStatus(coordinates,value);
         
-        return this->otherboard.getSquareStatus(coordinates);
+        return this->otherBoard.getSquareStatus(coordinates);
     }
 }

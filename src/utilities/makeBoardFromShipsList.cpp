@@ -25,6 +25,6 @@ namespace fleetBattle
                     board.at(row).at(column) = SquareStatus::SHIP;
         }
 
-        return std::move(board);
+        return board;
     }
 }

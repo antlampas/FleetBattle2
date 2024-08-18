@@ -10,8 +10,8 @@ add_subdirectory(utilities     utilities     )
 add_executable(fleetBattle2 main.cpp)
 
 target_link_libraries(  fleetBattle2 PUBLIC
+                        utilities
                         playerBoard
                         opponentBoard
                         player
-                        utilities
                      )

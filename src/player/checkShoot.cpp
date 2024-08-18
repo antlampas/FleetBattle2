@@ -32,14 +32,14 @@ namespace fleetBattle
                 {
                     if(shipInitialColumn < shipEndColumn)
                     {
-                        if(coordinatesColumn > shipInitialColumn && coordinatesColumn < shipEndColumn)
+                        if(coordinatesColumn >= shipInitialColumn && coordinatesColumn <= shipEndColumn)
                         {
                             this->isShipSunk(ship);
                         }
                     }
                     else
                     {
-                        if(coordinatesColumn > shipEndColumn && coordinatesColumn < shipInitialColumn)
+                        if(coordinatesColumn >= shipEndColumn && coordinatesColumn <= shipInitialColumn)
                         {
                             this->isShipSunk(ship);
                         }

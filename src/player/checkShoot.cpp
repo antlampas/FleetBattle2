@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    inline SquareType player::checkShoot(DecodedCoordinates coordinates)
+     SquareType player::checkShoot(DecodedCoordinates coordinates)
     {
         this->ownBoard.setSquareStatus(coordinates,this->ownBoard.getSquareStatus(coordinates)+32);
 

@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    inline SquareType playerBoard::getSquareStatus(DecodedCoordinates coordinates)
+     SquareType playerBoard::getSquareStatus(DecodedCoordinates coordinates)
     {
         return this->_board.at(coordinates.first).at(coordinates.second);
     }

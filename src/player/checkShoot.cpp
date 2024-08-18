@@ -56,14 +56,14 @@ namespace fleetBattle
                 {
                     if(shipInitialRow < shipEndRow)
                     {
-                        if(coordinatesRow > shipInitialRow && coordinatesRow < shipEndRow)
+                        if(coordinatesRow >= shipInitialRow && coordinatesRow <= shipEndRow)
                         {
                             this->isShipSunk(ship);
                         }
                     }
                     else
                     {
-                        if(coordinatesRow > shipEndRow && coordinatesRow < shipInitialRow)
+                        if(coordinatesRow >= shipEndRow && coordinatesRow <= shipInitialRow)
                         {
                             this->isShipSunk(ship);
                         }

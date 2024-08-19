@@ -24,7 +24,14 @@ namespace fleetBattle
         player _player;
         
         private:
-        std::mutex mutex;
+        std::stop_token stopToken;
+        std::shared_ptr<std::mutex> mutex;
+        std::shared_ptr<std::vector<std::string>> incomingQueue;
+        std::shared_ptr<std::vector<std::string>> outgoingQueue;
+
+        public:
+        agent(std::stop_token,std::shared_ptr<std::mutex>,std::shared_ptr<std::vector<std::string>>,std::shared_ptr<std::vector<std::string>>);
+        void operator()();
         
 
     };

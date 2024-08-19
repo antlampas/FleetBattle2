@@ -24,7 +24,6 @@ namespace fleetBattle
         private:
         BoardType _board;
         BoardType shipsOverlay;
-        
     };
 }
 

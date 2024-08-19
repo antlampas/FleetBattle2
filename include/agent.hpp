@@ -37,7 +37,7 @@ namespace fleetBattle
         agent(std::string,
               player,
               std::stop_token,
-              std::shared_ptr<std::mutex>,
+              std::mutex,
               std::shared_ptr<std::deque<std::string>>,
               std::shared_ptr<std::deque<std::string>>
               );

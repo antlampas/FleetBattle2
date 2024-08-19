@@ -8,12 +8,12 @@
 
 namespace fleetBattle
 {
-    agent::agent(   std::string                              name,
-                    player                                   p,
-                    std::stop_token                          stopToken,
-                    std::mutex                               mutex,
-                    std::shared_ptr<std::deque<std::string>> incomingQueue,
-                    std::shared_ptr<std::deque<std::string>> outgoingQueue
+    agent::agent(std::string                              name,
+                player                                    p,
+                std::stop_token                           stopToken,
+                std::mutex                                mutex,
+                std::shared_ptr<std::deque<std::string>>  incomingQueue,
+                std::shared_ptr<std::deque<std::string>>  outgoingQueue
                 ) : name(name),
                     _player(std::move(p)),
                     stopToken(std::move(stopToken)),

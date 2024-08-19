@@ -16,10 +16,7 @@ namespace fleetBattle
         std::vector<std::string> tokens {};
         std::stringstream messageStream {message};
 
-        while(!mesageStream.eof())
-        {
-            std::getline(messageStream,tokens," ");
-        }
+        while(!mesageStream.eof()) std::getline(messageStream,tokens," ");
 
         return tokens;
     }

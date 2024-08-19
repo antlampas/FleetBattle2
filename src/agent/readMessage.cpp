@@ -12,5 +12,8 @@ namespace fleetBattle
     {
         std::scoped_lock lock(*this->mutex);
         if(!this->incomingQueue->empty())
+        {
+            return this->incomingQueue.pop_front();
+        }
     }
 }

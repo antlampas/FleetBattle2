@@ -9,5 +9,11 @@
 namespace fleetBattle
 {
     void agent::operator()()
-    {}
+    {
+        while(!this->stopToken.stop_requested())
+        {
+            std::string message = this->readMessage();
+            //TODO: implement
+        }
+    }
 }

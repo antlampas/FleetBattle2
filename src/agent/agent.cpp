@@ -22,7 +22,5 @@ namespace fleetBattle
                     outgoingQueue(std::move(outgoingQueue)),
                     incomingMessage(),
                     outgoingMessage()
-    {
-        std::string message {};
-    }
+    {}
 }

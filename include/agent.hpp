@@ -22,7 +22,7 @@ namespace fleetBattle
     {
         private:
         std::string name;
-        player _player;
+        player      _player;
         
         private:
         std::stop_token stopToken;

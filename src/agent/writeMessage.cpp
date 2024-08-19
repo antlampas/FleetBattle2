@@ -15,7 +15,7 @@ namespace fleetBattle
         try
         {
             std::scoped_lock lock(*this->mutex);
-            this->outgoingMessage.push_back(message);
+            this->outgoingMessage.push_back(std::move(message));
             return true;
         }
         catch(std::exception e)

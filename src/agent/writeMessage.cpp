@@ -8,6 +8,8 @@
 
 namespace fleetBattle
 {
-    void agent::operator()()
-    {}
+    bool agent:writeMessage(std::string message)
+    {
+        
+    }
 }

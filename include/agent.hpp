@@ -13,7 +13,7 @@
 #include <thread>
 #include <mutex>
 #include <future>
-#include <vector>
+#include <deque>
 #include <string>
 
 namespace fleetBattle
@@ -21,18 +21,29 @@ namespace fleetBattle
     class agent
     {
         private:
+        std::string name;
         player _player;
         
         private:
         std::stop_token stopToken;
         std::shared_ptr<std::mutex> mutex;
-        std::shared_ptr<std::vector<std::string>> incomingQueue;
-        std::shared_ptr<std::vector<std::string>> outgoingQueue;
+        std::shared_ptr<std::deque<std::string>> incomingQueue;
+        std::shared_ptr<std::deque<std::string>> outgoingQueue;
+        std::string incomingMessage;
+        std::string outgoingMessage;
 
         public:
-        agent(std::stop_token,std::shared_ptr<std::mutex>,std::shared_ptr<std::vector<std::string>>,std::shared_ptr<std::vector<std::string>>);
+        agent(std::string,
+              player,
+              std::stop_token,
+              std::shared_ptr<std::mutex>,
+              std::shared_ptr<std::deque<std::string>>,
+              std::shared_ptr<std::deque<std::string>>
+              );
         void operator()();
-        
 
+        private:
+        std::string readMessage();
+        bool        writeMessage(std::string);
     };
 }

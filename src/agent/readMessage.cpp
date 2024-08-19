@@ -8,6 +8,9 @@
 
 namespace fleetBattle
 {
-    void agent::operator()()
-    {}
+    std::string agent::readMessage()
+    {
+        std::scoped_lock lock(*this->mutex);
+        if(!this->incomingQueue->empty())
+    }
 }

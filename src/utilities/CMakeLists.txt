@@ -8,4 +8,5 @@ add_library(utilities SHARED
             isVertical.cpp
             makeBoardFromShipsList.cpp
             shipsOverlap.cpp
+            tokenizeMessage.cpp
            )

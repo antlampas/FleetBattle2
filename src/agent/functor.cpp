@@ -13,7 +13,8 @@ namespace fleetBattle
         while(!this->stopToken.stop_requested())
         {
             std::string message = this->readMessage();
-            //TODO: implement
+            
+            std::vector<std::string> messageTokens;
         }
     }
 }

@@ -19,6 +19,7 @@ namespace fleetBattle
     bool shipsOverlap(ShipPosition,ShipPosition);
     DecodedCoordinates decodeCoordinates(Coordinates);
     BoardType makeBoardFromShipsList(std::vector<ShipPosition>);
+    std::vector<std::string> tokenizeMessage(std::string);
 }
 
 #endif

@@ -8,6 +8,7 @@
 #define BOARD_HPP
 
 #include "types.hpp"
+#include "utilities.hpp"
 #include "player.hpp"
 
 #include <thread>

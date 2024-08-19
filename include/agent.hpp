@@ -47,3 +47,5 @@ namespace fleetBattle
         bool        writeMessage(std::string);
     };
 }
+
+#endif

@@ -4,8 +4,8 @@
  *
  */
 
-#ifndef BOARD_HPP
-#define BOARD_HPP
+#ifndef AGENT_HPP
+#define AGENT_HPP
 
 #include "types.hpp"
 #include "utilities.hpp"

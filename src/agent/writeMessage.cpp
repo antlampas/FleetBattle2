@@ -10,12 +10,12 @@
 
 namespace fleetBattle
 {
-    bool agent:writeMessage(std::string message)
+    bool agent::writeMessage(std::string message)
     {
         try
         {
             std::scoped_lock lock(*this->mutex);
-            this->outgoingMessage.push_back(message);
+            this->outgoingMessage->push_back(message);
             return true;
         }
         catch(std::exception e)

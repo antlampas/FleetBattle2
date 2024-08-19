@@ -17,5 +17,9 @@ namespace fleetBattle
             this->incomingQueue->pop_front();
             return message;
         }
+        else
+        {
+            return " ";
+        }
     }
 }

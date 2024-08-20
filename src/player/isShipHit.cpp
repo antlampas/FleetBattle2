@@ -24,34 +24,13 @@ namespace fleetBattle
             int shipEndColumn     = ship.second.second;
 
             if(coordinatesRow == shipInitialRow)
-            {
                 if(shipInitialColumn < shipEndColumn)
-                {
-                    if(coordinatesColumn >= shipInitialColumn && coordinatesColumn <= shipEndColumn)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
+                    if(coordinatesColumn >= shipInitialColumn && coordinatesColumn <= shipEndColumn) return true;
+                    else return false;
                 else
-                {
-                    if(coordinatesColumn >= shipEndColumn && coordinatesColumn <= shipInitialColumn)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-            }
-            else
-            {
-                return false;
-            }
+                    if(coordinatesColumn >= shipEndColumn && coordinatesColumn <= shipInitialColumn) return true;
+                    else return false;
+            else return false;
         }
         else
         {
@@ -60,34 +39,13 @@ namespace fleetBattle
             int shipColumn     = ship.first.second;
 
             if(coordinatesColumn == shipInitialColumn)
-            {
                 if(shipInitialRow < shipEndRow)
-                {
-                    if(coordinatesRow >= shipInitialRow && coordinatesRow <= shipEndRow)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
+                    if(coordinatesRow >= shipInitialRow && coordinatesRow <= shipEndRow) return true;
+                    else return false;
                 else
-                {
-                    if(coordinatesRow >= shipEndRow && coordinatesRow <= shipInitialRow)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-            }
-            else
-            {
-                return false;
-            }
+                    if(coordinatesRow >= shipEndRow && coordinatesRow <= shipInitialRow) return true;
+                    else return false;
+            else return false;
         }
     }
 }

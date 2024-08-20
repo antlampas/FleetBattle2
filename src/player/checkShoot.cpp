@@ -16,15 +16,9 @@ namespace fleetBattle
         int coordinatesColumn = coordinates.second;
 
         for(auto ship: this->deployedShips)
-        {
             if(this->isShipHit(ship,coordinates))
-            {
                 if(this->isShipSunk(ship))
-                {
                     this->addSunkShip(ship);
-                }
-            }
-        }
 
         return this->ownBoard.getSquareStatus(coordinates);
     }

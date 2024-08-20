@@ -6,6 +6,8 @@
 
 #include "agent.hpp"
 
+#include <chrono>
+
 namespace fleetBattle
 {
     void agent::operator()()
@@ -23,9 +25,14 @@ namespace fleetBattle
                 if(messageTokens.at(0) == "shoot")
                 {
                     DecodedCoordinates coordinates = decodeCoordinates(messageTokens.at(1));
-                    if(coordinates != std::pair<int,int>(-1,-1)) SquareType shootStatus = this->_player.checkShoot(coordinates);
+                    if(coordinates != std::pair<int,int>(-1,-1))
+                    {
+                        SquareType shootStatus = this->_player.checkShoot(coordinates);
+                        this->writeMessage(this->name + " square status " + shootStatus);
+                    }
                 }
             }
+            std::this_thread::sleep_for(std::chrono::milliseconds(1));
         }
     }
 }

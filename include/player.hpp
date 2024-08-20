@@ -26,7 +26,7 @@ namespace fleetBattle
         
         public:
         int getSunkShipsCount();
-        int getDeployedShips();
+        int getDeployedShipsCount();
 
         private:
         playerBoard               ownBoard;

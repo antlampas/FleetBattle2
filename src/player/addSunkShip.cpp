@@ -17,7 +17,7 @@ namespace fleetBattle
         }
         else
         {
-            return ShipPosition{{0,0},{0,0}};
+            return ShipPosition{{-1,-1},{-1,-1}};
         }
     }
 }

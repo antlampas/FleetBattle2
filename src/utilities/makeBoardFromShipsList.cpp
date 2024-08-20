@@ -11,10 +11,10 @@ namespace fleetBattle
     BoardType makeBoardFromShipsList(std::vector<ShipPosition> ships)
     {
         BoardType board {};
-        for(int row: {0,1,2,3,4,5,6,7,8,9})
+        for(int row: std::ranges::iota_view(0,10))
         {
             board.push_back(ColumnType());
-            for(int column: {0,1,2,3,4,5,6,7,8,9})
+            for(int column: std::ranges::iota_view(0,10))
                 board.at(row).push_back(SquareStatus::WATER);
         }
 

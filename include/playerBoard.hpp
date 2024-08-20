@@ -10,6 +10,8 @@
 #include "utilities.hpp"
 #include "board.hpp"
 
+#include <ranges>
+
 namespace fleetBattle
 {
     class playerBoard final : public board

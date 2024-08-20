@@ -10,6 +10,8 @@
 #include "types.hpp"
 #include "board.hpp"
 
+#include <ranges>
+
 namespace fleetBattle
 {
     class opponentBoard final : public board

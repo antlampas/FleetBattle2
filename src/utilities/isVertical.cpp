@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    bool isVertical(ShipPosition ship)
+    bool isVertical(ShipPositionType ship)
     {
         if(ship.first.first != ship.second.first && ship.first.second == ship.second.second)
             return true;

@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    playerBoard::playerBoard(std::vector<ShipPosition> ships)
+    playerBoard::playerBoard(std::vector<ShipPositionType> ships)
     {
         BoardType board {makeBoardFromShipsList(ships)};
         std::swap(board,this->_board);

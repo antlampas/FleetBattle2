@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    bool player::isShipHit(ShipPosition ship,DecodedCoordinates coordinates)
+    bool player::isShipHit(ShipPositionType ship,DecodedCoordinatesType coordinates)
     {
         int coordinatesRow    = coordinates.first;
         int coordinatesColumn = coordinates.second;

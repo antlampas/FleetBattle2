@@ -17,11 +17,11 @@ namespace fleetBattle
     {
         public:
         player() = delete;
-        player(std::vector<ShipPosition>);
-        SquareType checkShoot(DecodedCoordinates);
+        player(std::vector<ShipPositionType>);
+        SquareType checkShoot(DecodedCoordinatesType);
         BoardType  checkOwnBoard();
         BoardType  checkOtherBoard();
-        SquareType updateOtherBoard(DecodedCoordinates,SquareType);
+        SquareType updateOtherBoard(DecodedCoordinatesType,SquareType);
         ~player();
         
         public:
@@ -31,13 +31,13 @@ namespace fleetBattle
         private:
         playerBoard               ownBoard;
         opponentBoard             otherBoard;
-        std::vector<ShipPosition> sunkShips;
-        std::vector<ShipPosition> deployedShips;
+        std::vector<ShipPositionType> sunkShips;
+        std::vector<ShipPositionType> deployedShips;
 
         private:
-        ShipPosition addSunkShip(ShipPosition);
-        bool         isShipSunk(ShipPosition);
-        bool         isShipHit(ShipPosition,DecodedCoordinates);
+        ShipPositionType addSunkShip(ShipPositionType);
+        bool         isShipSunk(ShipPositionType);
+        bool         isShipHit(ShipPositionType,DecodedCoordinatesType);
     };
 }
 

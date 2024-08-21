@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-     SquareType player::updateOtherBoard(DecodedCoordinates coordinates,SquareType value)
+     SquareType player::updateOtherBoard(DecodedCoordinatesType coordinates,SquareType value)
     {
         this->otherBoard.setSquareStatus(coordinates,value);
         

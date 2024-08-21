@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    player::player(std::vector<ShipPosition> deployedShips) : ownBoard{},otherBoard{}
+    player::player(std::vector<ShipPositionType> deployedShips) : ownBoard{},otherBoard{}
     {
         for(auto ship: deployedShips)
         {

@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    ShipPosition player::addSunkShip(ShipPosition ship)
+    ShipPositionType player::addSunkShip(ShipPositionType ship)
     {
         if(this->isShipSunk(ship))
         {
@@ -17,7 +17,7 @@ namespace fleetBattle
         }
         else
         {
-            return ShipPosition{{-1,-1},{-1,-1}};
+            return ShipPositionType{{-1,-1},{-1,-1}};
         }
     }
 }

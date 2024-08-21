@@ -16,12 +16,12 @@ namespace fleetBattle
 {
     enum SquareStatus : char { WATER='W',WATER_HIT='w',SHIP='S',SHIP_HIT='s' };
 
-    using SquareType         = char;
-    using ColumnType         = std::vector<SquareType>;
-    using BoardType          = std::vector<ColumnType>;
-    using DecodedCoordinates = std::pair<int,int>;
-    using ShipPosition       = std::pair<DecodedCoordinates,DecodedCoordinates>;
-    using Coordinates        = std::string;
+    using SquareType             = char;
+    using ColumnType             = std::vector<SquareType>;
+    using BoardType              = std::vector<ColumnType>;
+    using DecodedCoordinatesType = std::pair<int,int>;
+    using ShipPositionType       = std::pair<DecodedCoordinatesType,DecodedCoordinatesType>;
+    using CoordinatesType        = std::string;
 }
 
 #endif

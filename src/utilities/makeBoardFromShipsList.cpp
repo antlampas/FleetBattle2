@@ -8,7 +8,7 @@
 
 namespace fleetBattle
 {
-    BoardType makeBoardFromShipsList(std::vector<ShipPosition> ships)
+    BoardType makeBoardFromShipsList(std::vector<ShipPositionType> ships)
     {
         BoardType board {};
         for(int row: std::ranges::iota_view(0,10))

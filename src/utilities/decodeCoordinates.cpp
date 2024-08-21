@@ -13,7 +13,7 @@
 
 namespace fleetBattle
 {
-    DecodedCoordinates decodeCoordinates(Coordinates coordinates)
+    DecodedCoordinatesType decodeCoordinates(CoordinatesType coordinates)
     {
         std::regex validCoordinates("^[a-jA-J][0-9]$|^[a-jA-J]10$");
         if(std::regex_match(coordinates,validCoordinates))
@@ -21,13 +21,13 @@ namespace fleetBattle
             std::transform(coordinates.begin(),coordinates.end(),coordinates.begin(),::toupper);
             std::string colStr = coordinates.substr(0,1);
             std::string rowStr = coordinates.substr(1,coordinates.size()-1);
-            DecodedCoordinates _DecodedCoordinates {static_cast<int>(colStr.c_str()[0])-65,std::stoi(rowStr)};
-            return _DecodedCoordinates;
+            DecodedCoordinatesType _DecodedCoordinatesType {static_cast<int>(colStr.c_str()[0])-65,std::stoi(rowStr)};
+            return _DecodedCoordinatesType;
         }
         else
         {
-            DecodedCoordinates _DecodedCoordinates {-1,-1};
-            return _DecodedCoordinates;
+            DecodedCoordinatesType _DecodedCoordinatesType {-1,-1};
+            return _DecodedCoordinatesType;
         }
     }
 }

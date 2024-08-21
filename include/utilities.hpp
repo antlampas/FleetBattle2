@@ -15,11 +15,11 @@
 
 namespace fleetBattle
 {
-    bool isVertical(ShipPosition);
-    bool isHorizontal(ShipPosition);
-    bool shipsOverlap(ShipPosition,ShipPosition);
-    DecodedCoordinates decodeCoordinates(Coordinates);
-    BoardType makeBoardFromShipsList(std::vector<ShipPosition>);
+    bool isVertical(ShipPositionType);
+    bool isHorizontal(ShipPositionType);
+    bool shipsOverlap(ShipPositionType,ShipPositionType);
+    DecodedCoordinatesType decodeCoordinates(CoordinatesType);
+    BoardType makeBoardFromShipsList(std::vector<ShipPositionType>);
     std::vector<std::string> tokenizeMessage(std::string);
 }
 

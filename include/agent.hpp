@@ -14,7 +14,6 @@
 #include <thread>
 #include <mutex>
 #include <future>
-#include <deque>
 #include <string>
 
 namespace fleetBattle
@@ -28,8 +27,8 @@ namespace fleetBattle
         private:
         std::stop_token stopToken;
         std::shared_ptr<std::mutex> mutex;
-        std::shared_ptr<std::deque<std::string>> incomingQueue;
-        std::shared_ptr<std::deque<std::string>> outgoingQueue;
+        std::shared_ptr<std::queue<std::string>> incomingQueue;
+        std::shared_ptr<std::queue<std::string>> outgoingQueue;
         std::string incomingMessage;
         std::string outgoingMessage;
 
@@ -38,8 +37,8 @@ namespace fleetBattle
               player,
               std::stop_token,
               std::shared_ptr<std::mutex>,
-              std::shared_ptr<std::deque<std::string>>,
-              std::shared_ptr<std::deque<std::string>>
+              std::shared_ptr<std::queue<std::string>>,
+              std::shared_ptr<std::queue<std::string>>
               );
         void operator()();
 

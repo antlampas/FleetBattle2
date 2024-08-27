@@ -12,8 +12,8 @@ namespace fleetBattle
                 player                                    p,
                 std::stop_token                           stopToken,
                 std::shared_ptr<std::mutex>               mutex,
-                std::shared_ptr<std::deque<std::string>>  incomingQueue,
-                std::shared_ptr<std::deque<std::string>>  outgoingQueue
+                std::shared_ptr<std::queue<std::string>>  incomingQueue,
+                std::shared_ptr<std::queue<std::string>>  outgoingQueue
                 ) : name(name),
                     _player(std::move(p)),
                     stopToken(std::move(stopToken)),

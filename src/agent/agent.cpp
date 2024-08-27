@@ -14,9 +14,9 @@ namespace fleetBattle
                 std::shared_ptr<std::mutex>               internalMutex,
                 std::shared_ptr<std::queue<std::string>>  internalIncomingQueue,
                 std::shared_ptr<std::queue<std::string>>  internalOutgoingQueue,
-                std::shared_ptr<std::mutex>               externalMutex,
-                std::shared_ptr<std::queue<std::string>>  externalIncomingQueue,
-                std::shared_ptr<std::queue<std::string>>  externalOutgoingQueue
+                std::shared_ptr<std::mutex>               controllerMutex,
+                std::shared_ptr<std::queue<std::string>>  controllerIncomingQueue,
+                std::shared_ptr<std::queue<std::string>>  controllerOutgoingQueue
                 ) : name(name),
                     _player(std::move(p)),
                     stopToken(std::move(stopToken)),
@@ -25,10 +25,10 @@ namespace fleetBattle
                     internalOutgoingQueue(std::move(outgoingQueue)),
                     internalIncomingMessage({}),
                     internalOutgoingMessage({}),
-                    externalMutex(std::move(mutex)),
-                    externalIncomingQueue(std::move(incomingQueue)),
-                    externalOutgoingQueue(std::move(outgoingQueue)),
-                    externalIncomingMessage({}),
-                    externalOutgoingMessage({})
+                    controllerMutex(std::move(mutex)),
+                    controllerIncomingQueue(std::move(incomingQueue)),
+                    controllerOutgoingQueue(std::move(outgoingQueue)),
+                    controllerIncomingMessage({}),
+                    controllerOutgoingMessage({})
     {}
 }

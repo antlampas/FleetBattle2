@@ -49,6 +49,9 @@ namespace fleetBattle
               std::stop_token,
               std::shared_ptr<std::mutex>,
               std::shared_ptr<std::queue<std::string>>,
+              std::shared_ptr<std::queue<std::string>>,
+              std::shared_ptr<std::mutex>,
+              std::shared_ptr<std::queue<std::string>>,
               std::shared_ptr<std::queue<std::string>>
               );
         void operator()();

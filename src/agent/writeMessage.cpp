@@ -12,11 +12,23 @@ namespace fleetBattle
 {
     bool agent::writeMessage(std::string message)
     {
+        //Queue "True": client queue
+        //Queue "False": internal queue
         try
         {
-            std::scoped_lock lock(*this->mutex);
-            this->outgoingQueue->push(std::move(message));
-            return true;
+            if(queue)
+            {
+                std::scoped_lock lock(*this->controllerMutex);
+                this->controllerOutgoingQueue->push(std::move(message));
+                return true;
+            }
+            }
+            else
+            {
+                std::scoped_lock lock(*this->internalMutex);
+                this->internalOutgoingQueue->push(std::move(message));
+                return true;
+            }
         }
         catch(std::exception e)
         {

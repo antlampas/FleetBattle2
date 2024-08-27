@@ -24,15 +24,26 @@ namespace fleetBattle
         std::string name;
         player      _player;
         
+        //Internal interface
         private:
-        std::stop_token stopToken;
-        std::shared_ptr<std::mutex> mutex;
-        std::shared_ptr<std::queue<std::string>> incomingQueue;
-        std::shared_ptr<std::queue<std::string>> outgoingQueue;
-        std::string incomingMessage;
-        std::string outgoingMessage;
+        std::stop_token                          stopToken;
+        std::shared_ptr<std::condition_variable> turn;
+        std::shared_ptr<std::mutex>              internalMutex;
+        std::shared_ptr<std::queue<std::string>> internalIncomingQueue;
+        std::shared_ptr<std::queue<std::string>> internalOutgoingQueue;
+        std::string                              internalIncomingMessage;
+        std::string                              internalOutgoingMessage;
+
+        //Interface to client
+        private:
+        std::shared_ptr<std::mutex>              controllerMutex;
+        std::shared_ptr<std::queue<std::string>> controllerIncomingQueue;
+        std::shared_ptr<std::queue<std::string>> controllerOutgoingQueue;
+        std::string                              controllerCncomingMessage;
+        std::string                              controllerOutgoingMessage;
 
         public:
+        agent() = delete;
         agent(std::string,
               player,
               std::stop_token,
@@ -43,8 +54,8 @@ namespace fleetBattle
         void operator()();
 
         private:
-        std::string readMessage();
-        bool        writeMessage(std::string);
+        std::string readMessage(bool);
+        bool        writeMessage(bool,std::string);
     };
 }
 

@@ -8,18 +8,37 @@
 
 namespace fleetBattle
 {
-    std::string agent::readMessage()
+    std::string agent::readMessage(bool queue)
     {
-        std::scoped_lock lock(*this->mutex);
-        if(!this->incomingQueue->empty())
+        //Queue "True": client queue
+        //Queue "False": internal queue
+        if(queue)
         {
-            std::string message = this->incomingQueue->front;
-            this->incomingQueue->pop();
-            return message;
+            std::scoped_lock lock(*this->controllerMutex);
+            if(!this->controllerIncomingQueue->empty())
+            {
+                std::string message = this->controllerIncomingQueue->front;
+                this->controllerIncomingQueue->pop();
+                return message;
+            }
+            else
+            {
+                return " ";
+            }
         }
         else
         {
-            return " ";
+            std::scoped_lock lock(*this->internalMutex);
+            if(!this->internalIncomingQueue->empty())
+            {
+                std::string message = this->internalIncomingQueue->front;
+                this->internalIncomingQueue->pop();
+                return message;
+            }
+            else
+            {
+                return " ";
+            }
         }
     }
 }

@@ -10,7 +10,7 @@
 
 namespace fleetBattle
 {
-    bool agent::writeMessage(std::string message)
+    bool agent::writeMessage(bool queue,std::string message)
     {
         //Queue "True": client queue
         //Queue "False": internal queue
@@ -21,7 +21,6 @@ namespace fleetBattle
                 std::scoped_lock lock(*this->controllerMutex);
                 this->controllerOutgoingQueue->push(std::move(message));
                 return true;
-            }
             }
             else
             {

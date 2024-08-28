@@ -14,13 +14,13 @@ namespace fleetBattle
     {
         while(!this->stopToken.stop_requested())
         {
-            std::string message = this->readMessage();
+            std::string message = this->readMessage(1);
             
             std::vector<std::string> messageTokens;
 
-            if(!this->incomingQueue->empty())
+            if(!this->controllerIncomingQueue->empty())
             {
-                messageTokens = tokenizeMessage(this->readMessage());
+                messageTokens = tokenizeMessage(this->readMessage(1));
 
                 if(messageTokens.at(0) == "shoot")
                 {
@@ -28,7 +28,7 @@ namespace fleetBattle
                     if(coordinates != std::pair<int,int>(-1,-1))
                     {
                         SquareType shootStatus = this->_player.checkShoot(coordinates);
-                        this->writeMessage(this->name + " square status " + shootStatus);
+                        this->writeMessage(1,this->name + " square status " + shootStatus);
                     }
                 }
             }

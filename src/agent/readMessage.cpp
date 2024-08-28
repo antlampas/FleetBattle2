@@ -17,7 +17,7 @@ namespace fleetBattle
             std::scoped_lock lock(*this->controllerMutex);
             if(!this->controllerIncomingQueue->empty())
             {
-                std::string message = this->controllerIncomingQueue->front;
+                std::string message = this->controllerIncomingQueue->front();
                 this->controllerIncomingQueue->pop();
                 return message;
             }
@@ -31,7 +31,7 @@ namespace fleetBattle
             std::scoped_lock lock(*this->internalMutex);
             if(!this->internalIncomingQueue->empty())
             {
-                std::string message = this->internalIncomingQueue->front;
+                std::string message = this->internalIncomingQueue->front();
                 this->internalIncomingQueue->pop();
                 return message;
             }

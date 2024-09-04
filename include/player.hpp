@@ -29,15 +29,15 @@ namespace fleetBattle
         int getDeployedShipsCount();
 
         private:
-        playerBoard               ownBoard;
-        opponentBoard             otherBoard;
+        playerBoard                   ownBoard;
+        opponentBoard                 otherBoard;
         std::vector<ShipPositionType> sunkShips;
         std::vector<ShipPositionType> deployedShips;
 
         private:
         ShipPositionType addSunkShip(ShipPositionType);
-        bool         isShipSunk(ShipPositionType);
-        bool         isShipHit(ShipPositionType,DecodedCoordinatesType);
+        bool             isShipSunk(ShipPositionType);
+        bool             isShipHit(ShipPositionType,DecodedCoordinatesType);
     };
 }
 

@@ -19,7 +19,7 @@ namespace fleetBattle
         public:
         playerBoard();
         playerBoard(std::vector<ShipPositionType>);
-        BoardType  getBoardStatus()                               override;
+        BoardType  getBoardStatus()                                   override;
         SquareType getSquareStatus(DecodedCoordinatesType)            override;
         SquareType setSquareStatus(DecodedCoordinatesType,SquareType) override;
 

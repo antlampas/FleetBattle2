@@ -18,7 +18,7 @@ namespace fleetBattle
     {
         public:
         opponentBoard();
-        BoardType  getBoardStatus()                               override;
+        BoardType  getBoardStatus()                                   override;
         SquareType getSquareStatus(DecodedCoordinatesType)            override;
         SquareType setSquareStatus(DecodedCoordinatesType,SquareType) override;
         

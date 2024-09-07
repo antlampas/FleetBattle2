@@ -16,7 +16,8 @@ namespace fleetBattle
     class matchMaster
     {
         public:
-        matchMaster();
+        matchMaster(std::stop_token);
+        void operator()();
         
         private:
         agent                   agentA;
@@ -26,6 +27,9 @@ namespace fleetBattle
         private:
         std::condition_variable cv;
         std::mutex              mutex;
+        std::stop_source        stopSourceA;
+        std::stop_source        stopSourceB;
         std::stop_token         stopToken;
+        char                    playerInTurn;
     };
 }
